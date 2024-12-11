@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Ekolojik Kredi Logo">
+            <h1>Ekolojik Kredi Sistemi</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><button id="homeBtn">Ana Sayfa</button></li>
+            <li><button id="aboutBtn">Nedir?</button></li>
+            <li><button id="contactBtn">Bize Ulaşın</button></li>
+            <li><button id="registerBtn">Kayıt Ol</button></li>
+            <li><button id="dataEntryBtn">Veri Girişi</button></li>
+            <li><button id="viewDataBtn">Veri Görüntüle</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="homeContent" class="content-section">
+            <h2>Hoşgeldiniz!</h2>
+            <p>Ekolojik kredi sistemine katılmak için kayıt olun ve atık türlerinizi girerek puan kazanın.</p>
+        </section>
+
+        <section id="aboutContent" class="content-section hidden">
+            <h2>Ekolojik Kredi Nedir?</h2>
+            <p>Ekolojik kredi, geri dönüşüm yapan bireylerin çevreye sağladığı katkıyı ölçmek için kullanılan bir sistemdir. Atık türlerine göre puan kazanabilir ve bu puanlarla ödüller kazanabilirsiniz.</p>
+        </section>
+
+        <section id="contactContent" class="content-section hidden">
+            <h2>Bize Ulaşın</h2>
+            <p>İzmir Torbalı Anadolu Lisesi - Ekolojik Kredi Sistemi<br>
+               E-posta: ekolojikkreditubitak@gmail.com</p>
+        </section>
+
+        <section id="registerContent" class="content-section hidden">
+            <h2>Kayıt Ol</h2>
+            <form id="registrationForm">
+                <h3>Öğrenci Kayıt</h3>
+                <label for="studentName">Ad:</label>
+                <input type="text" id="studentName" required>
+                <label for="studentEmail">E-posta:</label>
+                <input type="email" id="studentEmail" required>
+                <label for="studentPhone">Telefon Numarası:</label>
+                <input type="tel" id="studentPhone" required>
+                <label for="studentSchool">Okul:</label>
+                <input type="text" id="studentSchool" required>
+                <button type="submit">Kayıt Ol</button>
+            </form>
+
+            <form id="schoolRegisterForm" class="hidden">
+                <h3>Okul Kayıt</h3>
+                <label for="schoolProvince">İl:</label>
+                <input type="text" id="schoolProvince" required>
+                <label for="schoolDistrict">İlçe:</label>
+                <input type="text" id="schoolDistrict" required>
+                <label for="schoolName">Okul Adı:</label>
+                <input type="text" id="schoolName" required>
+                <label for="schoolPassword">Şifre:</label>
+                <input type="password" id="schoolPassword" required>
+                <button type="submit">Okul Kaydı Yap</button>
+            </form>
+        </section>
+
+        <section id="dataEntryContent" class="content-section hidden">
+            <h2>Veri Girişi</h2>
+            <form id="waste-entry-form">
+                <label for="wasteType">Atık Türü:</label>
+                <select id="wasteType" required>
+                    <option value="plastik">Plastik</option>
+                    <option value="kağıt">Kağıt</option>
+                    <option value="cam">Cam</option>
+                    <option value="metal">Metal</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="yağ">Yağ</option>
+                    <option value="tekstil">Tekstil</option>
+                    <option value="pil">Pil</option>
+                </select>
+                <label for="wasteAmount">Atık Miktarı (kg):</label>
+                <input type="number" id="wasteAmount" required>
+                <button type="submit">Veri Girişi Yap</button>
+            </form>
+        </section>
+
+        <section id="viewDataContent" class="content-section hidden">
+            <h2>Veri Görüntüle</h2>
+            <p>Toplam Atık: <span id="totalWaste">0</span> kg</p>
+            <p>Toplam Puan: <span id="totalPoints">0</span></p>
+            <p>Atık Türü: <span id="wasteTypes">Yok</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Torbalı Anadolu Lisesi Coğrafya Proje Ödevi Ekolojik Kredi Örnek Sitesidir</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
